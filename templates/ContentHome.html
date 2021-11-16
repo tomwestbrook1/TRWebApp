@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>TRW Project 2021</title>
-    </head>
-    <body>
-        <h1>Hello World</h1>
-        <form name="txtform" action="/">
-            <label for="txt1">Label for txt1</label><br>
-            <input type="text" id="txtinput" name="txtinput"><br>
-        </form>
 
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>TRW Project 2021</title>
+
+</head>
+
+<body>
+    {% extends "template.html" %}
+    {% block content %}
+    <header>
+        <h1>Hello World</h1>
+        <div style="float: right"><a href="{{ url_for('about') }}">About</a>
+        </div>
+        <br>
+    </header>
+    <h3>List of Items:</h3>
+    <p>Show items from... File</p>
+
+    <form name="txtform" action="{{ url_for('action_form') }}" method="POST">
+        <label for="txt1">Label for txt1</label><br>
+        <input type="text" id="txtinput" name="txtinput"><br>
+    </form>
+    {% endblock %}
+</body>
+
 </html>

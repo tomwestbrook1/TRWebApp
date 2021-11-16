@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>TRW Project 2021</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template1.css') }}">
+</head>
+
+<body>
+    <h1>TRW Project Autum 2021</h1>
+    <div class="toplist">
+        <ul class="topmenu">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('references') }}">References</a></li>
+        </ul>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+
+</html>
