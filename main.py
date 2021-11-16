@@ -1,17 +1,30 @@
 # imports ....
 import cgi
 import cgitb
-cgitb.enable(display=0, logdir='./Files/log') # unsure on args at this point
+from flask import Flask
 
-# vars ....
-form = cgi.FieldStorage()
-searchItem = form.getvalue('txtinput')
+app = Flask(__name__)
+@app.route("/")
+def web_app():
+    return 'Hello World'
 
-open_file = open('./Files/outputs', 'a')
 
-open_file.write("Hello World")
-open_file.write(searchItem)
-open_file.close()
+print(web_app())
+
+
+def cgi_func():
+    cgitb.enable(display=0, logdir='./Files/log') # unsure on args at this point
+
+    # vars ....
+    form = cgi.FieldStorage()
+    searchItem = form.getvalue('txtinput')
+
+    open_file = open('./Files/outputs', 'a')
+
+    open_file.write("Hello World")
+    open_file.write(searchItem)
+    open_file.close()
+
 
 
 """
