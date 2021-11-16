@@ -4,16 +4,16 @@ import webbrowser
 from markupsafe import escape
 
 # variables....
-app = Flask(__name__, static_url_path='')
-
+app = Flask(__name__, static_url_path='/static')
+app.config['TESTING'] = True
+app.config.update(
+    TESTING=True,
+    TEMPLATES_AUTO_RELOAD = True
+)
 # functions...
 
 
 @app.route("/")
-def main_page():
-    return render_template("ContentHome.html")
-
-
 @app.route("/home")
 def home():
     return render_template("ContentHome.html")
@@ -47,4 +47,5 @@ def action_form():
 
 
 if __name__ == "__main__":
+    
     app.run()

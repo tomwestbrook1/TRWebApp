@@ -1,0 +1,30 @@
+ul {
+    list-style-type: none; 
+    background-color: #2a2a2a;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgba(202, 202, 202, 0.89);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+body {
+    margin: 50px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.central {
+    text-align: left;
+    min-height: 100vh;
+    margin: 20px;
+}

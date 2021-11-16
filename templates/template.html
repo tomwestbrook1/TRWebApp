@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>TRW Project 2021</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/template1.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='template1.css') }}">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
             <li><a href="{{ url_for('references') }}">References</a></li>
         </ul>
     </div>
-
+    
     {% block content %}
 
     {% endblock %}
